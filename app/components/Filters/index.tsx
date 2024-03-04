@@ -13,6 +13,7 @@ import RequestTour from "@/app/properties/components/RequestTour";
 import { useToggleState } from "@/hooks/useToggleState";
 import FiltersModal from "../FiltersModal/FiltersModal";
 import Link from "next/link";
+import Container from "../Container";
 
 const data = [
   {
@@ -116,48 +117,49 @@ const FiltersContainer = () => {
     },
   };
   return (
-    <div id="filters" className="bg-[#1b1717] grid grid-cols-12 py-2 ">
-      <div className="relative  col-span-9 px-6">
-        <Slider {...settings}>
-          {data.map((el, idx) => (
-            <div key={idx} className="cursor-pointer">
-              <div className="flex  flex-col items-center justify-center">
-                <MdOutlineTerrain color="#f7f7f7" />
-                <span className="text-center text-xs hover:text-slate-300 text-[#f7f7f7]">
-                  {el.label}
-                </span>
+    <Container>
+      <div id="filters" className=" grid grid-cols-12 py-2 ">
+        <div className="relative  col-span-9 px-6">
+          <Slider {...settings}>
+            {data.map((el, idx) => (
+              <div key={idx} className="cursor-pointer">
+                <div className="flex  flex-col items-center justify-center">
+                  <MdOutlineTerrain color="#ffffff" />
+                  <span className="text-center text-xs  text-voks-shades-white">
+                    {el.label}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-      <div className="px-6 col-span-3 flex items-center gap-2">
-        <button
-          onClick={() => openModal()}
-          className="flex items-center gap-1 rounded-md border py-2 px-3 border-gray-300"
-        >
-          <IoOptionsOutline color="#f7f7f7" />
-          <span className="text-[#f7f7f7] hover:text-slate-300 text-sm">
-            Filter
-          </span>
-        </button>
+            ))}
+          </Slider>
+        </div>
+        <div className="px-6 col-span-3 flex items-center gap-2">
+          <button
+            onClick={() => openModal()}
+            className="flex items-center gap-1 rounded-md border py-2 px-3 border-gray-300"
+          >
+            <IoOptionsOutline color="#ffffff" />
+            <span className="text-voks-shades-white text-sm">Filter</span>
+          </button>
 
-        <Link href="/help-center" className="flex items-center gap-1 py-2 px-3">
-          <MdOutlineSupportAgent color="#f7f7f7" />
-          <span className="text-[#f7f7f7] hover:text-slate-300 text-sm">
-            Help center
-          </span>
-        </Link>
+          <Link
+            href="/help-center"
+            className="flex items-center gap-1 py-2 px-3"
+          >
+            <MdOutlineSupportAgent color="#ffffff" />
+            <span className="text-voks-shades-white text-sm">Help center</span>
+          </Link>
 
-        {/* <button className="flex items-center gap-1 py-2 px-3">
+          {/* <button className="flex items-center gap-1 py-2 px-3">
           <IoMdHelpCircle color="#f7f7f7" />
           <span className="text-[#f7f7f7] hover:text-slate-300 text-sm">
             Help
           </span>
         </button> */}
+        </div>
+        <FiltersModal open={isModalOpen} onClose={closeModal} />
       </div>
-      <FiltersModal open={isModalOpen} onClose={closeModal} />
-    </div>
+    </Container>
   );
 };
 

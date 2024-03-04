@@ -1,0 +1,19 @@
+footer {
+  display: none;
+}
+
+#footer-strip {
+  display: none;
+}
+
+#filters {
+  display: none;
+}
+
+body {
+  background: #ffffff;
+}
+
+#navbar {
+  display: none;
+}

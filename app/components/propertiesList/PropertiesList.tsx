@@ -1,5 +1,6 @@
 import React from "react";
 import ShortletCard from "../ShortletCard";
+import Button from "@/app/common/button";
 const images = [
   "/carousel1.jpg",
   "/carousel2.jpg",
@@ -22,9 +23,11 @@ const PropertiesList = () => {
       {/* Show more */}
       <div className="flex items-center gap-3 justify-center flex-col">
         <p className="text-[#f7f7f7]">Continue Exploring Properties</p>
-        <button className="bg-slate-700 text-[#f7f7f7] py-2 px-4 rounded-md">
+        {/* <button className="text-[12px] bg-voks-secondary text-[#f7f7f7] py-2 px-4 rounded-md">
           Show More
-        </button>
+        </button> */}
+
+        <Button label="Show more" variant="secondary" />
       </div>
     </div>
   );

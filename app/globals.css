@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #1d1c1c;
+  background-color: #ffffff;
+  /* background-color: #1d1c1c; */
 }
 
 .slick-slide > div {
@@ -19,25 +20,39 @@ body {
 }
 
 /* Targeting the left arrow in the custom-slider instance */
-.custom-slider .slick-prev {
+.slick-prev {
   color: #1d1c1c;
   /* fill: #1d1c1c; */
 
   margin-left: 10px; /* Adjust the negative margin as needed */
 }
-.custom-slider .slick-prev:hover {
+.slick-prev:hover {
   color: #1d1c1c;
   /* fill: #1d1c1c; */
-
 }
 
 /* Targeting the right arrow in the custom-slider instance */
-.custom-slider .slick-next {
+.slick-next {
   /* background-color: #1d1c1c */
   color: #1d1c1c;
   margin-right: 10px; /* Adjust the negative margin as needed */
 }
-.custom-slider .slick-next:hover{
+.slick-next:hover {
   /* background-color: #1d1c1c */
   color: #1d1c1c;
+}
+
+:root {
+  --shades-red: #e4010a;
+  --shades-blue: #0d006a;
+  --shades-black: #121212;
+  --shades-white: #ffffff;
+  --shades-gray-3: #535c5f;
+  --shades-gray-25: #979797;
+  --shades-gray-2: #b0bdc1;
+  --shades-gray-1: #e5f0f3;
+  --border: #d9d9d980;
+  --shadow: 0 4px 24px #0404040d;
+  --overlay: blur(8px);
+  --overlay-bg: #00292dbf;
 }

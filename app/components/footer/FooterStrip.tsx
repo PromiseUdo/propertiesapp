@@ -7,7 +7,7 @@ import { RiInstagramFill } from "react-icons/ri";
 
 const FooterStrip = () => {
   return (
-    <div className="flex items-center justify-between bg-slate-900 text-[#f7f7f7] h-8 py-1 w-full border-t border-b border-gray-500">
+    <div  id="footer-strip" className="flex items-center justify-between bg-slate-900 text-[#f7f7f7] h-8 py-1 w-full border-t border-b border-gray-500">
       <Container>
         <div className=" text-xs flex items-center gap-1 justify-between">
           <div className="flex items-center gap-1">

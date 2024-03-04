@@ -57,26 +57,26 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className="sticky top-0 w-full  z-20 shadow-sm border-b border-slate-700">
-      <div className="text-[#f7f7f7]  bg-slate-700 ">
-        <div className="py-4 ">
+    <div
+      id="navbar"
+      className="sticky top-0 w-full bg-[#ffffff]  z-20 shadow-sm border-b border-voks-border"
+    >
+      <div className="text-[#f7f7f7]  ">
+        <div className="">
           <Container>
-            <div className="flex items-center justify-between gap-3 md:gap-0">
-              <Link
+            <div className="py-2 flex items-center justify-between gap-3 md:gap-0">
+              {/* <Link
                 className={clsx(
                   redressed.className,
-                  "font-bold text-2xl flex items-center gap-2"
+                  "font-bold flex items-center gap-2"
                 )}
                 href="/"
-              >
-                <Image
-                  src={"/icon-192x192.png"}
-                  alt="logo"
-                  height={35}
-                  width={35}
-                />
-                <span>Properties Store</span>
-              </Link>
+              > */}
+              <div className="relative w-[200px] h-[50px] ">
+                <Image src={"/logo.png"} alt="logo" fill objectFit="cover" />
+              </div>
+
+              {/* </Link> */}
               {/* Search box div */}
               {showSearchBox && (
                 <div
@@ -93,7 +93,7 @@ const Navbar = () => {
                   </div>
                 </div>
               )}
-              <div className="flex items-center gap-6 md:gap-8">
+              <div className="flex text-sm text-voks-shades-black items-center gap-6 md:gap-8">
                 <div>Saved Properties</div>
                 <UserMenu />
               </div>
@@ -101,13 +101,15 @@ const Navbar = () => {
           </Container>
         </div>
       </div>
-      <Container>
+      {/* <Container> */}
+      <div className="w-full bg-voks-shades-black">
         <FiltersContainer />
-      </Container>
+      </div>
+      {/* </Container> */}
       {showDetailedNav && (
-        <Container>
+        <div className="w-full bg-voks-shades-black">
           <DetailedNav />
-        </Container>
+        </div>
       )}
     </div>
   );
